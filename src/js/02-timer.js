@@ -33,10 +33,10 @@ document.querySelector('[data-start]').addEventListener('click',(e)=>{
   function removeInterval(){
     if (delta<0) {
       clearInterval(interval)
-      document.querySelector('[data-days]').textContent=00
-  document.querySelector('[data-hours]').textContent=00
-  document.querySelector('[data-minutes]').textContent=00
-  document.querySelector('[data-seconds]').textContent=00
+      document.querySelector('[data-days]').textContent='00'
+      document.querySelector('[data-hours]').textContent='00'
+  document.querySelector('[data-minutes]').textContent='00'
+  document.querySelector('[data-seconds]').textContent='00'
     }
   }
   removeInterval()
