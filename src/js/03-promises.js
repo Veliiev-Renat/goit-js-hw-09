@@ -27,7 +27,7 @@ document.querySelector('[type="submit"]').addEventListener('click',(e)=>{
 e.preventDefault()
 
 for (let i = 0; i < inputValues.amount.value; i++) {
-  createPromise(1 + i, inputValues.delay.value + 1 * inputValues.step.value)
+  createPromise(1 + i, Number(inputValues.delay.value) + i * Number(inputValues.step.value))
   .then(({position, delay})=>{
     Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
   })

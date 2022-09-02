@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-
+let UserData = null
 const options = {
     enableTime: true,
     time_24hr: true,
@@ -13,6 +13,7 @@ const options = {
         document.querySelector('[data-start]').disabled = true
         return 
       }
+      
       document.querySelector('[data-start]').disabled = false
       return UserData = selectedDates[0]
       
@@ -35,8 +36,8 @@ document.querySelector('[data-start]').addEventListener('click',(e)=>{
       clearInterval(interval)
       document.querySelector('[data-days]').textContent='00'
       document.querySelector('[data-hours]').textContent='00'
-  document.querySelector('[data-minutes]').textContent='00'
-  document.querySelector('[data-seconds]').textContent='00'
+      document.querySelector('[data-minutes]').textContent='00'
+      document.querySelector('[data-seconds]').textContent='00'
     }
   }
   removeInterval()
